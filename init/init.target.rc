@@ -209,12 +209,6 @@ on property:init.svc.zygote=restarting
 
 on charger
     start qcom-post-boot
-    start vendor.hvdcp_opti
     setprop sys.usb.configfs 1
     chown system system /sys/class/leds/red/brightness
     write /sys/class/leds/red/brightness 255
-
-service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
-     class main
-     user root
-     group system wakelock

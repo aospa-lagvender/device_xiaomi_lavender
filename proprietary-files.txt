@@ -1022,9 +1022,6 @@ vendor/lib/libmmcamera_tintless_bg_pca_algo.so|8d0742522e0af649ee05fb85fa1a204ac
 vendor/lib/libmmcamera_tuning.so|28364a5125194034584cb44e053272a9d70fa5b5
 vendor/lib/libmmcamera_tuning_lookup.so|e00c7abb7b72ceff77fbd73d7b38f3fa8fdb31ca
 
-# Charger - from LA.UM.9.2.1.r1-08700-sdm660.0
-vendor/bin/hvdcp_opti|45f500aa4816c87de222ee7eb33655f0e83e392c
-
 # CNE - from jasmine
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
 etc/cne/Nexus/ROW/ROW_profiles.xml|238e785e9674b27c4b2365958d127533d7293132
