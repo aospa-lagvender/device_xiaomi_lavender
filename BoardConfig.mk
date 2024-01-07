@@ -117,9 +117,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
