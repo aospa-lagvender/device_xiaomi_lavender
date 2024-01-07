@@ -13,11 +13,6 @@
 # limitations under the License.
 
 on init
-   # ART dex2oat
-   setprop dalvik.vm.dex2oat64.enabled true
-   setprop dalvik.vm.systemuicompilerfilter speed
-   setprop ro.sys.fw.dex2oat_thread_count 8
-   
    # Configure little cpu parameters
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load 90
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
