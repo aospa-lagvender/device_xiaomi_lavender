@@ -279,7 +279,7 @@ PRODUCT_PACKAGES += \
     init.device.rc \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
+    init.lavender.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
