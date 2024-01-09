@@ -232,7 +232,8 @@ TARGET_COMMON_QTI_COMPONENTS += \
     charging \
     display \
     gps \
-    perf
+    perf \
+    vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -331,13 +332,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
