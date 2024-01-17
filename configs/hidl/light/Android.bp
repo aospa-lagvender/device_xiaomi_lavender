@@ -9,6 +9,7 @@ cc_binary {
     name: "android.hardware.light@2.0-service.lavender",
     init_rc: ["hidl/android.hardware.light@2.0-service.lavender.rc"],
     vintf_fragments: ["hidl/android.hardware.light@2.0-service.lavender.xml"],
+    overrides: ["android.hardware.lights-service.qti"],
     srcs: ["hidl/service.cpp", "hidl/Light.cpp"],
     shared_libs: [
         "libbase",
@@ -25,6 +26,7 @@ cc_binary {
     relative_install_path: "hw",
     init_rc: ["aidl/android.hardware.lights.lavender.rc"],
     vintf_fragments: ["aidl/android.hardware.lights.lavender.xml"],
+    overrides: ["android.hardware.lights-service.qti"],
     vendor: true,
     shared_libs: [
         "libbase",
