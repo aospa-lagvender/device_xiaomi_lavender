@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2022-2023 The LineageOS Project
+# Copyright (C) 2024 Paranoid Android
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -10,7 +11,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
-    NotchBarKiller
+    NotchBarKiller \
+    WifiOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -24,10 +26,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl:32 \
-    audio.bluetooth.default \
-    audio.primary.sdm660 \
-    audio.r_submix.default \
-    audio.usb.default \
     libaudio-resampler \
     libhdmiedid \
     libhfp \
@@ -36,6 +34,12 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libsndmonitor \
     libvolumelistener
+
+PRODUCT_PACKAGES += \
+    audio.primary.sdm660 \
+    audio.r_submix.default \
+    audio.bluetooth.default \
+    audio.usb.default
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -69,7 +73,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.device@3.5:64 \
     android.hardware.camera.provider@2.6:64 \
     android.hardware.camera.provider@2.4-impl:32 \
@@ -84,7 +87,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-# ConsumerIR
+# Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.lavender
 
@@ -96,9 +99,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0_32 \
-    android.frameworks.displayservice@1.0.vendor \
-    android.frameworks.displayservice@1.0
+    android.frameworks.displayservice@1.0 \
+    android.frameworks.displayservice@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -108,7 +110,6 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0-impl \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4.vendor
 
@@ -126,10 +127,6 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio \
     qcom.fmradio.xml
-
-# Freeform Multiwindow
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
 
 # Health
 PRODUCT_PACKAGES += \
@@ -249,10 +246,11 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    libsensorndkbridge \
     android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
@@ -300,13 +298,13 @@ PRODUCT_COPY_FILES += \
 # Tinyxml
 PRODUCT_PACKAGES += \
     libtinyxml
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 

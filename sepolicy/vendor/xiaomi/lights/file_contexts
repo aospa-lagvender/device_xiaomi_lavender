@@ -1,0 +1,2 @@
+# Light HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.lavender                     u:object_r:hal_light_default_exec:s0

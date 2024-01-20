@@ -1,0 +1,2 @@
+# Thermal
+/data/vendor/thermal(/.*)?                      u:object_r:thermal_data_file:s0
