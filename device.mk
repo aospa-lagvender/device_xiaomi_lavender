@@ -16,16 +16,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:32 \
     android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio@2.0-impl:32 \
     libaudio-resampler \
     libhdmiedid \
     libhfp \
@@ -38,7 +33,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.primary.sdm660 \
     audio.r_submix.default \
-    audio.bluetooth.default \
     audio.usb.default
 
 PRODUCT_COPY_FILES += \
@@ -63,13 +57,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml
 
 # Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
+TARGET_USE_QTI_BT_STACK := false
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -120,13 +108,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
-
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio \
-    qcom.fmradio.xml
 
 # Health
 PRODUCT_PACKAGES += \
@@ -214,6 +195,7 @@ PRODUCT_COPY_FILES += \
 TARGET_COMMON_QTI_COMPONENTS += \
     alarm \
     av \
+    bt \
     charging \
     display \
     gps \

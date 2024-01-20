@@ -7,9 +7,6 @@
 
 DEVICE_PATH := device/xiaomi/lavender
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
