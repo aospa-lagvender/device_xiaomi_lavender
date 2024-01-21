@@ -140,6 +140,7 @@ debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 ro.config.avoid_gfx_accel=true
 ro.hwui.render_ahead=3
+debug.renderengine.backend=skiaglthreaded
 
 # Sensors
 ro.vendor.sdk.sensors.gestures=false
