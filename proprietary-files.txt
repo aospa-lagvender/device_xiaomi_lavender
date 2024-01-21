@@ -1472,11 +1472,6 @@ vendor/bin/time_daemon|1a9fefcb24b48d8c3c53d5d223cabfd939c79034
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 -vendor/lib64/libtime_genoff.so|21364569fcdecbd6f7f6a02eeaea12d67b800392
 
-# TUI - from jasmine
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|a0d692fe10ef9dc4479497fa666640612f06fbb4
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|e47baed52f1c0637de34fa55e45a86b4b412a672
-
 # Widevine - from jasmine
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|1aed116c6cd73ee0c89a5eec050afab5c64b9f87
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|dee5b7838ac561a2292e89fc0c4ccd1932224215
