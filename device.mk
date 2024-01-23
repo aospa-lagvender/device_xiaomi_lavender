@@ -208,6 +208,12 @@ TARGET_COMMON_QTI_COMPONENTS += \
     vibrator \
     telephony
 
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
+TARGET_NO_ABSTRUCT := true
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
