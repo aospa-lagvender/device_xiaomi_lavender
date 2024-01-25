@@ -189,9 +189,7 @@ TARGET_BOARD_PLATFORM := sdm660
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    libprotobuf-cpp-full
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
