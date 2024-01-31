@@ -210,7 +210,8 @@ TARGET_COMMON_QTI_COMPONENTS += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    fstab.qcom_ramdisk
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \
